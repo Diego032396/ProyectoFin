@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFin.Views.vLogin"
+             Title="vLogin"
+             BackgroundColor="White">
+    <VerticalStackLayout>
+
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="220"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+           
+
+            <StackLayout>
+                <Frame BackgroundColor="Red" HeightRequest="60" WidthRequest="60" CornerRadius="30" Padding="0" Margin="0,100,0,0" HorizontalOptions="Center">
+                    <Image Source="https://e7.pngegg.com/pngimages/146/551/png-clipart-user-login-mobile-phones-password-user-miscellaneous-blue.png" Aspect="AspectFill" Margin="0"/>
+                </Frame>
+            </StackLayout>
+            <Grid RowSpacing="5" Grid.Row="1" Margin="20,20,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="1" Text="Welcome!" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" Padding="0" Margin="0"/>
+                <Label Grid.Row="2" Text="Sign in to continue" HorizontalOptions="Center" FontSize="Subtitle"/>
+
+                <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                    <Frame  BackgroundColor="Transparent" BorderColor="LightGreen" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                        <Image Source="" Aspect="AspectFill" Margin="0"/>
+                    </Frame>
+                    <Entry Text="" Placeholder="Username" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                </StackLayout>
+
+            </Grid>
+           
+            
+                
+        </Grid>
+        
+        
+    </VerticalStackLayout>
+</ContentPage>
