@@ -6,7 +6,29 @@
              BackgroundColor="White">
     
     <Grid RowDefinitions=".3* , .7*">
-        <Image Aspect="AspectFill" Source=""/>
+        <Image Aspect="AspectFill" Source="logo.png"/>
+        <Grid BackgroundColor="Black" Opacity=".5"/>
+        <Grid ColumnDefinitions="*,*">
+            <Image Aspect="AspectFit"
+            HeightRequest="100"
+            Source="ubicacion.png"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <RoundRectangle Margin="-5,-30,-5,-2"
+                            CornerRadius="30,30,0,0"
+                            Fill="White"/>
+            <VerticalStackLayout Margin="30,0,30,0">
+                <Label FontAttributes="Bold"
+                       FontFamily="bold"
+                       FontSize="Medium"
+                       Text="Bienvenido"
+                       TextColor="#2d2d2d"/>
+                <Label FontFamily="medium"
+                       Text="Inicia sesión para continuar"
+                       TextColor="#A3a3a4"/>
+
+            </VerticalStackLayout>
+        </Grid>
     </Grid>
 
 </ContentPage>
