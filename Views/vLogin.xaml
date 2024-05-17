@@ -26,8 +26,20 @@
                 <Label FontFamily="medium"
                        Text="Inicia sesión para continuar"
                        TextColor="#A3a3a4"/>
+                <Grid Margin="0,30,0,0" ColumnDefinitions=".2*, .8*">
+                    <RoundRectangle BackgroundColor="#edebf6"
+                                    CornerRadius="10"
+                                    HeightRequest="60"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    WidthRequest="60"/>
+                    <Image HorizontalOptions="Center">
+                        
+                    </Image>
 
-            </VerticalStackLayout>
+                </Grid>
+
+            </VerticalStackLayout> 
         </Grid>
     </Grid>
 
