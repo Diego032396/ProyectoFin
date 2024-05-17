@@ -29,15 +29,61 @@
                 <Grid Margin="0,30,0,0" ColumnDefinitions=".2*, .8*">
                     <RoundRectangle BackgroundColor="#edebf6"
                                     CornerRadius="10"
-                                    HeightRequest="60"
+                                    HeightRequest="50"
                                     HorizontalOptions="Center"
                                     VerticalOptions="Center"
                                     WidthRequest="60"/>
                     <Image HorizontalOptions="Center">
-                        
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="AwesomeSolid"
+                                Glyph="&#xf2bc;"
+                                Size="100"
+                                Color="Blue"/>
+                        </Image.Source>
                     </Image>
-
+                    <Entry Grid.Column="1"
+                           Placeholder="USUARIO"
+                           Text="Ingrese su usuario"
+                           VerticalOptions="Center"
+                           TextColor="Black"/>
                 </Grid>
+                <Grid Margin="0,30,0,0" ColumnDefinitions=".2*, .8*">
+                    <RoundRectangle BackgroundColor="#edebf6"
+                      CornerRadius="10"
+                      HeightRequest="50"
+                      HorizontalOptions="Center"
+                      VerticalOptions="Center"
+                      WidthRequest="60"/>
+                    <Image HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource
+                  FontFamily="AwesomeSolid"
+                  Glyph="&#xf1b0;"
+                  Size="100"
+                  Color="Blue"/>
+                        </Image.Source>
+                    </Image>
+                    <Entry Grid.Column="1"
+             Placeholder="CONTRASEÑA"
+             Text="Ingrese su contraseña"
+             VerticalOptions="Center"
+             TextColor="Black"/>
+                </Grid>
+                <Button
+                    Margin="0,20,0,0"
+                    BackgroundColor="Blue"
+                    HeightRequest="60"
+                    Text="Login"
+                    TextColor="White"/>
+                <Label Margin="0,20,0,-10"
+                       HorizontalOptions="Center"
+                       Text="Olvido su contraseña?"
+                       TextColor="Blue"
+                       TextDecorations="Underline"/>
+
+
+
 
             </VerticalStackLayout> 
         </Grid>
