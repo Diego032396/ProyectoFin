@@ -16,8 +16,8 @@
            
 
             <StackLayout>
-                <Frame BackgroundColor="Red" HeightRequest="60" WidthRequest="60" CornerRadius="30" Padding="0" Margin="0,100,0,0" HorizontalOptions="Center">
-                    <Image Source="https://e7.pngegg.com/pngimages/146/551/png-clipart-user-login-mobile-phones-password-user-miscellaneous-blue.png" Aspect="AspectFill" Margin="0"/>
+                <Frame BackgroundColor="Transparent" HeightRequest="60" WidthRequest="60" CornerRadius="30" Padding="0" Margin="0,100,0,0" HorizontalOptions="Center">
+                    <Image Source="https://cdn-icons-png.flaticon.com/128/3917/3917688.png" Aspect="AspectFill" Margin="0"/>
                 </Frame>
             </StackLayout>
             <Grid RowSpacing="5" Grid.Row="1" Margin="20,20,20,0">
@@ -34,10 +34,10 @@
                 <Label Grid.Row="2" Text="Sign in to continue" HorizontalOptions="Center" FontSize="Subtitle"/>
 
                 <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                    <Frame  BackgroundColor="Transparent" BorderColor="LightGreen" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
-                        <Image Source="" Aspect="AspectFill" Margin="0"/>
+                    <Frame  BackgroundColor="Transparent" BorderColor="LightGreen" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="3">
+                        <Image Source="https://cdn-icons-png.flaticon.com/128/9888/9888226.png" Aspect="AspectFill" Margin="3"/>
                     </Frame>
-                    <Entry Text="" Placeholder="Username" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                    <Entry  Placeholder="Username" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                 </StackLayout>
 
             </Grid>
