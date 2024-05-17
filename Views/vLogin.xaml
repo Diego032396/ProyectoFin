@@ -75,12 +75,18 @@
                     BackgroundColor="Blue"
                     HeightRequest="60"
                     Text="Login"
-                    TextColor="White"/>
+                    TextColor="White"
+                    />
                 <Label Margin="0,20,0,-10"
                        HorizontalOptions="Center"
                        Text="Olvido su contraseña?"
                        TextColor="Blue"
                        TextDecorations="Underline"/>
+                <Button Margin="0,30,0,0"
+                        BackgroundColor="#FBF6FD"
+                        HeightRequest="60"
+                        Text="Crear cuanta nueva"
+                        TextColor="Blue"/>
 
 
 
