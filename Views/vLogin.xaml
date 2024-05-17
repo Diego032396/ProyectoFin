@@ -4,48 +4,9 @@
              x:Class="ProyectoFin.Views.vLogin"
              Title="vLogin"
              BackgroundColor="White">
-    <VerticalStackLayout>
+    
+    <Grid RowDefinitions=".3* , .7*">
+        <Image Aspect="AspectFill" Source=""/>
+    </Grid>
 
-        <Grid BackgroundColor="White">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="220"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="50"/>
-            </Grid.RowDefinitions>
-
-           
-
-            <StackLayout>
-                <Frame BackgroundColor="Transparent" HeightRequest="60" WidthRequest="60" CornerRadius="30" Padding="0" Margin="0,100,0,0" HorizontalOptions="Center">
-                    <Image Source="https://cdn-icons-png.flaticon.com/128/3917/3917688.png" Aspect="AspectFill" Margin="0"/>
-                </Frame>
-            </StackLayout>
-            <Grid RowSpacing="5" Grid.Row="1" Margin="20,20,20,0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Label Grid.Row="1" Text="Welcome!" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" Padding="0" Margin="0"/>
-                <Label Grid.Row="2" Text="Sign in to continue" HorizontalOptions="Center" FontSize="Subtitle"/>
-
-                <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                    <Frame  BackgroundColor="Transparent" BorderColor="LightGreen" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="3">
-                        <Image Source="https://cdn-icons-png.flaticon.com/128/9888/9888226.png" Aspect="AspectFill" Margin="3"/>
-                    </Frame>
-                    <Entry  Placeholder="Username" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
-                </StackLayout>
-
-            </Grid>
-           
-            
-                
-        </Grid>
-        
-        
-    </VerticalStackLayout>
 </ContentPage>
