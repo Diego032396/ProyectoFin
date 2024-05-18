@@ -9,9 +9,7 @@
         <Image Aspect="AspectFit" Source="logo.png"/>
         <Grid BackgroundColor="Black" Opacity=".5"/>
         <Grid ColumnDefinitions="*,*">
-            <Image Aspect="AspectFit"
-            HeightRequest="100"
-            Source=""/>
+           
             <skia:SKLottieView Grid.Column="1"
                                HeightRequest="100"
                                RepeatCount="-1"
@@ -79,10 +77,6 @@
                         HeightRequest="60"
                         Text="Crear cuanta nueva"
                         TextColor="Blue"/>
-
-
-
-
             </VerticalStackLayout> 
         </Grid>
     </Grid>
