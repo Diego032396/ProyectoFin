@@ -61,11 +61,13 @@
              TextColor="Black"/>
                 </Grid>
                 <Button
+                    x:Name="btnLogin"
                     Margin="0,20,0,0"
                     BackgroundColor="Blue"
                     HeightRequest="60"
                     Text="Login"
                     TextColor="White"
+                    Clicked="btnLogin_Clicked"                    
                     />
                 <Label Margin="0,20,0,-10"
                        HorizontalOptions="Center"
@@ -75,7 +77,7 @@
                 <Button Margin="0,30,0,0"
                         BackgroundColor="#FBF6FD"
                         HeightRequest="60"
-                        Text="Crear cuanta nueva"
+                        Text="Crear cuenta nueva"
                         TextColor="Blue"/>
             </VerticalStackLayout> 
         </Grid>
