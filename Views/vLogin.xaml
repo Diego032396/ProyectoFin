@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
              x:Class="ProyectoFin.Views.vLogin"
-             Title="vLogin"
              BackgroundColor="White">
     
     <Grid RowDefinitions=".3* , .7*">
-        <Image Aspect="AspectFill" Source="logo.png"/>
+        <Image Aspect="AspectFit" Source="logo.png"/>
         <Grid BackgroundColor="Black" Opacity=".5"/>
         <Grid ColumnDefinitions="*,*">
             <Image Aspect="AspectFit"
             HeightRequest="100"
-            Source="ubicacion.png"/>
+            Source=""/>
+            <skia:SKLottieView Grid.Column="1"
+                               HeightRequest="100"
+                               RepeatCount="-1"
+                               Source="animation.json"/>
         </Grid>
         <Grid Grid.Row="1">
             <RoundRectangle Margin="-5,-30,-5,-2"
@@ -27,21 +31,15 @@
                        Text="Inicia sesión para continuar"
                        TextColor="#A3a3a4"/>
                 <Grid Margin="0,30,0,0" ColumnDefinitions=".2*, .8*">
-                    <RoundRectangle BackgroundColor="#edebf6"
+                    <RoundRectangle BackgroundColor="Transparent"
                                     CornerRadius="10"
                                     HeightRequest="50"
                                     HorizontalOptions="Center"
                                     VerticalOptions="Center"
                                     WidthRequest="60"/>
-                    <Image HorizontalOptions="Center">
-                        <Image.Source>
-                            <FontImageSource
-                                FontFamily="AwesomeSolid"
-                                Glyph="&#xf2bc;"
-                                Size="100"
-                                Color="Blue"/>
-                        </Image.Source>
-                    </Image>
+                    <Image Aspect="AspectFit"
+                            HeightRequest="50"
+                            Source="usuario.png"/>
                     <Entry Grid.Column="1"
                            Placeholder="USUARIO"
                            Text="Ingrese su usuario"
@@ -49,21 +47,15 @@
                            TextColor="Black"/>
                 </Grid>
                 <Grid Margin="0,30,0,0" ColumnDefinitions=".2*, .8*">
-                    <RoundRectangle BackgroundColor="#edebf6"
+                    <RoundRectangle BackgroundColor="Transparent"
                       CornerRadius="10"
                       HeightRequest="50"
                       HorizontalOptions="Center"
                       VerticalOptions="Center"
                       WidthRequest="60"/>
-                    <Image HorizontalOptions="Center">
-                        <Image.Source>
-                            <FontImageSource
-                  FontFamily="AwesomeSolid"
-                  Glyph="&#xf1b0;"
-                  Size="100"
-                  Color="Blue"/>
-                        </Image.Source>
-                    </Image>
+                    <Image Aspect="AspectFit"
+                        HeightRequest="50"
+                        Source="contrasena1.png"/>
                     <Entry Grid.Column="1"
              Placeholder="CONTRASEÑA"
              Text="Ingrese su contraseña"
