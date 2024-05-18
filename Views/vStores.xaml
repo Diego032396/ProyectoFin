@@ -2,11 +2,33 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoFin.Views.vStores"
-             Title="vStores">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             BackgroundColor="White" >
+    <Grid RowDefinitions=".3*, .7*">
+        <Image Aspect="AspectFit" Source="logo.png"/>
+        <Grid BackgroundColor="Black" Opacity=".5"/>
+        <VerticalStackLayout Spacing="10">
+            <Label 
+                Margin="25,25,0,0"
+                FontAttributes="Bold"
+                FontFamily="bold"
+                Text="Seleccione su local"
+                TextColor="White"/>
+            <Grid Margin="25,10,0,0" ColumnDefinitions="Auto,*">
+                <Label FontFamily="regular"
+                Text="1030 Burton Avenue"
+                TextColor="White"
+                VerticalOptions="Center"/>
+                <Image Grid.Column="1"
+                       Margin="15,0,0,0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"
+                       WidthRequest="15"/>
+            </Grid>
+        </VerticalStackLayout>
+        <Grid Grid.Row="1">
+            <RoundRectangle Margin="-5,-30,-5,-2"
+                CornerRadius="30,30,0,0"
+                Fill="White"/>
+        </Grid>
+    </Grid>
 </ContentPage>

@@ -49,7 +49,9 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\Font Awesome 6 Free-Regular-400.otf" />
+	  <None Remove="Resources\Fonts\Lato-Black.ttf" />
 	  <None Remove="Resources\Fonts\Lato-Bold.ttf" />
+	  <None Remove="Resources\Fonts\Lato-Italic.ttf" />
 	  <None Remove="Resources\Fonts\Lato-Regular.ttf" />
 	  <None Remove="Resources\Images\logo.png" />
 	  <None Remove="Resources\Raw\animation.json" />

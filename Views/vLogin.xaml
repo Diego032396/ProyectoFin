@@ -8,13 +8,7 @@
     <Grid RowDefinitions=".3* , .7*">
         <Image Aspect="AspectFit" Source="logo.png"/>
         <Grid BackgroundColor="Black" Opacity=".5"/>
-        <Grid ColumnDefinitions="*,*">
-           
-            <skia:SKLottieView Grid.Column="1"
-                               HeightRequest="100"
-                               RepeatCount="-1"
-                               Source="animation.json"/>
-        </Grid>
+    
         <Grid Grid.Row="1">
             <RoundRectangle Margin="-5,-30,-5,-2"
                             CornerRadius="30,30,0,0"
@@ -38,11 +32,12 @@
                     <Image Aspect="AspectFit"
                             HeightRequest="50"
                             Source="usuario.png"/>
-                    <Entry Grid.Column="1"
-                           Placeholder="USUARIO"
-                           Text="Ingrese su usuario"
-                           VerticalOptions="Center"
-                           TextColor="Black"/>
+                    <Entry 
+                        x:Name="txtUsuario"
+                        Grid.Column="1"
+                        Placeholder="Ingrese su Usuario"
+                        VerticalOptions="Center"
+                        TextColor="Black"/>
                 </Grid>
                 <Grid Margin="0,30,0,0" ColumnDefinitions=".2*, .8*">
                     <RoundRectangle BackgroundColor="Transparent"
@@ -54,17 +49,18 @@
                     <Image Aspect="AspectFit"
                         HeightRequest="50"
                         Source="contrasena1.png"/>
-                    <Entry Grid.Column="1"
-             Placeholder="CONTRASEÑA"
-             Text="Ingrese su contraseña"
-             VerticalOptions="Center"
-             TextColor="Black"/>
+                    <Entry 
+                        x:Name="txtContraseña"
+                        Grid.Column="1"
+                        Placeholder="Ingrese su contraseña"
+                        VerticalOptions="Center"
+                        TextColor="Black"/>
                 </Grid>
                 <Button
                     x:Name="btnLogin"
                     Margin="0,20,0,0"
                     BackgroundColor="Blue"
-                    HeightRequest="60"
+                    HeightRequest="40"
                     Text="Login"
                     TextColor="White"
                     Clicked="btnLogin_Clicked"                    
