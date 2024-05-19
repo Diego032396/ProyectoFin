@@ -11,6 +11,10 @@ public partial class vStores : ContentPage
 		InitializeComponent();
 		
 	}
-	
-	
+
+    private void btnnavegar_Clicked(object sender, EventArgs e)
+    {
+		Navigation.PushAsync(new Views.vProductos());
+    }
+
 }

@@ -55,8 +55,10 @@
 	  <None Remove="Resources\Fonts\Lato-Regular.ttf" />
 	  <None Remove="Resources\Images\aguila.png" />
 	  <None Remove="Resources\Images\aki.png" />
+	  <None Remove="Resources\Images\contrasena.gif" />
 	  <None Remove="Resources\Images\logo.png" />
 	  <None Remove="Resources\Images\marcas.jpg" />
+	  <None Remove="Resources\Images\marido.gif" />
 	  <None Remove="Resources\Images\santamaria.png" />
 	  <None Remove="Resources\Images\supermaxi.jpg" />
 	  <None Remove="Resources\Raw\animation.json" />
@@ -69,6 +71,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Views\vLogin.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\vProductos.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\vStores.xaml">

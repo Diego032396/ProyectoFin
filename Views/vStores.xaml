@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProyectoFin.Views.vStores"
-              >
+             x:Class="ProyectoFin.Views.vStores">
     <Grid RowDefinitions=".3*, .7*">
         <Image Aspect="AspectFit" Source="logo.png"/>
+        
         <Grid BackgroundColor="Black" Opacity=".8"/>
+        
+
         <VerticalStackLayout Spacing="10">
             <Label 
                 Margin="25,25,0,0"
@@ -13,16 +15,16 @@
                 FontFamily="bold"
                 Text="Seleccione su local"
                 TextColor="White"/>
-            <Grid Margin="25,10,0,0" ColumnDefinitions="Auto,*">
-                <Label FontFamily="regular"
-                Text="1030 Burton Avenue"
-                TextColor="White"
-                VerticalOptions="Center"/>
-                <Image Grid.Column="1"
-                       Margin="15,0,0,0"
-                       HorizontalOptions="Start"
-                       VerticalOptions="Center"
-                       WidthRequest="15"/>
+            
+            <Grid Margin="25,10,0,0" 
+                  ColumnDefinitions="Auto,*">
+                
+                <Button 
+                    x:Name="btnnavegar"
+                    Text="navegar"
+                    Clicked="btnnavegar_Clicked"
+                        />
+             
             </Grid>
         </VerticalStackLayout>
         <Grid Grid.Row="1">
@@ -152,7 +154,11 @@
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
+                
             </CollectionView>
+            
         </Grid>
+       
     </Grid>
+   
 </ContentPage>
