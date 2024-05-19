@@ -11,4 +11,16 @@ public partial class vProductos : ContentPage
     {
 
     }
+
+
+
+    private void btncolgate_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void btncoca_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }

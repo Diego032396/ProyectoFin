@@ -55,7 +55,10 @@
 	  <None Remove="Resources\Fonts\Lato-Regular.ttf" />
 	  <None Remove="Resources\Images\aguila.png" />
 	  <None Remove="Resources\Images\aki.png" />
+	  <None Remove="Resources\Images\coca.png" />
+	  <None Remove="Resources\Images\colgate.png" />
 	  <None Remove="Resources\Images\contrasena.gif" />
+	  <None Remove="Resources\Images\ego.png" />
 	  <None Remove="Resources\Images\logo.png" />
 	  <None Remove="Resources\Images\marcas.jpg" />
 	  <None Remove="Resources\Images\marido.gif" />
