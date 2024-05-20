@@ -4,26 +4,12 @@
              x:Class="ProyectoFin.Views.vStores">
     <Grid RowDefinitions=".3*, .7*">
         <Image Aspect="AspectFit" Source="logo.png"/>
-        
         <Grid BackgroundColor="Black" Opacity=".8"/>
         
 
         <VerticalStackLayout Spacing="10">
-            <Label 
-                Margin="25,25,0,0"
-                FontAttributes="Bold"
-                FontFamily="bold"
-                Text="Seleccione su local"
-                TextColor="White"/>
-            
             <Grid Margin="25,10,0,0" 
                   ColumnDefinitions="Auto,*">
-                
-                <Button 
-                    x:Name="btnnavegar"
-                    Text="navegar"
-                    Clicked="btnnavegar_Clicked"
-                        />
              
             </Grid>
         </VerticalStackLayout>
@@ -31,134 +17,42 @@
             <RoundRectangle Margin="-5,-30,-5,-2"
                  CornerRadius="30,30,0,0"
                  Fill="White"/>
-            <CollectionView>
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Store 1</x:String>
-                        <x:String>Store 2</x:String>
-                        <x:String>Store 3</x:String>
-                        <x:String>Store 4</x:String>
-                        <x:String>Store 5</x:String>
-                    </x:Array>
-                </CollectionView.ItemsSource>
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout ItemSpacing="15" Orientation="Vertical"/>
-                </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid Padding="20,20,20,0" 
-                              HeightRequest="250"
-                              RowDefinitions=".6*,.4*">
-                            <RoundRectangle Grid.RowSpan="2"
-                                            Background="White"
-                                            CornerRadius="10">
-                                <RoundRectangle.Shadow>
-                                    <Shadow Brush="#CFD0D4"
-                                            Opacity="0.8"
-                                            Offset="10,10"/>
-                                </RoundRectangle.Shadow>
-
-                            </RoundRectangle>
-                            <Grid ColumnDefinitions=".4*, .2*, .4*"
-                                  RowDefinitions=".6*,.4*">
-                                <Image
-                                    Grid.RowSpan="2"
-                                    Grid.ColumnSpan="3"
-                                    Aspect="AspectFill"
-                                    Source="marcas.jpg"/>
-                                <Grid 
-                                    Grid.Row="1"
-                                      Margin="0,0,0,15"
-                                      HeightRequest="100"
-                                      HorizontalOptions="Start"
-                                      VerticalOptions="Center"
-                                      WidthRequest="100">
-                                </Grid>
-                                <Border Margin="0,0,0,10"
-                                        HeightRequest="70"
-                                        HorizontalOptions="Center"
-                                        StrokeShape="Ellipse"
-                                        StrokeThickness="4">
-                                    <Border.Stroke>
-                                        <LinearGradientBrush EndPoint="0,1">
-                                            <GradientStop Offset="0.0" Color="#FEFEEF"/>
-                                            <GradientStop Offset="0.25" Color="#ebd570"/>
-                                            <GradientStop Offset="0.5" Color="#FF94C3"/>
-                                            <GradientStop Offset="0.75" Color="#A573E4"/>
-                                            <GradientStop Offset="1.0" Color="#A9E2EE"/>
-                                        </LinearGradientBrush>
-                                    </Border.Stroke>
-                                    <Image HorizontalOptions="Center"
-                                           Source="aguila.png"/>
-                                </Border>
-                                <Grid Grid.Row="1" Grid.Column="2">
-                                    <RoundRectangle CornerRadius="10"
-                                                    Fill="#F8F8F7"
-                                                    HeightRequest="35"
-                                                    HorizontalOptions="Center"
-                                                    VerticalOptions="Center"
-                                                    WidthRequest="75"/>
-                                    <HorizontalStackLayout HorizontalOptions="Center"
-                                                           VerticalOptions="Center">
-                                        <Image Margin="0,0,15,0"
-                                               VerticalOptions="Center"
-                                               WidthRequest="15">
-                                            <Image.Source>
-                                                <FontImageSource
-                                                    FontFamily="AwesomeSolid"
-                                                    Glyph="&#xf017;"
-                                                    Color="Black"/>
-                                            </Image.Source>
-                                        </Image>
-                                        <Label
-                                            Grid.Row="1"
-                                            FontFamily="bold"
-                                            Text="10:30"
-                                            TextColor="Black"
-                                            VerticalOptions="Center"/>
-                                    </HorizontalStackLayout>
-                                                           
-                                </Grid>
-                            </Grid>
-                            <Grid Grid.Row="1" 
-                                  Margin="0,10,0,0"
-                                  Padding="10" 
-                                  ColumnDefinitions="*,*,*" 
-                                  RowDefinitions="*,*">
-                                <Label Grid.Column="0"
-                                       FontFamily="bold"
-                                       FontSize="Large"
-                                       HorizontalTextAlignment="Start"
-                                       Text="{Binding .}"
-                                       TextColor="Black"/>
-                                <Label Grid.Row="1"
-                                       Grid.Column="2"
-                                       Margin="0,10,0,0"
-                                       FontFamily="refular"
-                                       HorizontalOptions="End"
-                                       Text="Entrar al local"
-                                       BackgroundColor="Blue"
-                                       TextColor="White"
-                                       VerticalOptions="Center"/>
-
-                                <Label 
-                                    Grid.Row="1"
-                                    Margin="0,10,0,0"
-                                    FontFamily="regular"
-                                    Text="Supermercados"
-                                    TextColor="Black"
-                                    VerticalOptions="Center"/>
-
-
-                            </Grid>
+    <ListView x:Name="listaStores" ItemSelected="listaStores_ItemSelected" RowHeight="100">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label x:Name="lblId" Text="{Binding Id}" Grid.Row="0" Grid.Column="0" />
+                            <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Vertical">
+                                <Label Text="Nombre:" FontAttributes="Bold"/>
+                                <Label x:Name="lblNombre" Text="{Binding Nombre}" />
+                                <Label Text="Dirección:" FontAttributes="Bold"/>
+                                <Label x:Name="lblDireccion" Text="{Binding Direccion}" />
+                            </StackLayout>
+                            <StackLayout Grid.Row="0" Grid.Column="2" Orientation="Vertical">
+                                <Label Text="Latitud:" FontAttributes="Bold"/>
+                                <Label x:Name="lblLatitud" Text="{Binding Latitud}" />
+                                <Label Text="Longitud:" FontAttributes="Bold"/>
+                                <Label x:Name="lblLongitud" Text="{Binding Longitud}" />
+                            </StackLayout>
                         </Grid>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-                
-            </CollectionView>
-            
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    <ActivityIndicator x:Name="loadingIndicator" IsRunning="False" IsVisible="False" 
+                       HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Scale="0.5" />
         </Grid>
-       
     </Grid>
    
 </ContentPage>

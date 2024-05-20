@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFin.Views.ProductForm"
+             Title="Formulario de Producto">
+    <Grid Padding="20"
+      RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto"
+      ColumnDefinitions="*, *">
+        <Label Text="Registrar nuevo Producto" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" />
+        <Label Text="Nombre" Grid.Row="1" />
+        <Entry x:Name="txtNombre" Placeholder="Nombre" Grid.Row="1" Grid.Column="1" />
+        <Label Text="Precio" Grid.Row="2" />
+        <Entry x:Name="txtPrecio" Placeholder="Precio" Grid.Row="2" Grid.Column="1" />
+        <Label Text="Fecha de Caducidad" Grid.Row="3" />
+        <DatePicker x:Name="dateFechaCducidad" Grid.Row="3" Grid.Column="1" />
+        <Label Text="Imagen" Grid.Row="4" />
+        <Label x:Name="lblImagen" Grid.Row="4" Grid.Column="1" />
+        <Button x:Name="btnTakePhoto" Text="Tomar Foto" Grid.Row="5" Grid.ColumnSpan="2" Clicked="btnTakePhoto_Clicked" />
+        <Button x:Name="btnRegistrarForm" Text="Guardar" Grid.Row="6" Grid.ColumnSpan="2" BackgroundColor="LightBlue" Clicked="btnRegistrarForm_Clicked" />
+    </Grid>
+</ContentPage>

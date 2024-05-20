@@ -4,72 +4,46 @@
              x:Class="ProyectoFin.Views.vProductos"
              BackgroundColor="White"
             >
-    
-    <Grid RowDefinitions=".3* , .7*">
-            <Image Aspect="AspectFit" Source="logo.png"/>
-            <Grid BackgroundColor="Black" Opacity=".5"/>
-        <Grid Grid.Row="1">
-            <RoundRectangle Margin="-5,-30,-5,-2"
-                CornerRadius="30,30,0,0"
-                Fill="White"/>
-            <VerticalStackLayout Margin="30,0,0,0">
-                <Label 
-                    FontAttributes="Bold"
-                    FontFamily="bold"
-                    FontSize="Medium"
-                    Text="Bienvenido"
-                    TextColor="#2d2d2d"/>
-                <Label 
-                    FontFamily="medium"
-                    Text="Por favor selecciona el producto vas perchar "
-                    TextColor="#A3a3a4"/>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="80"/>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="80"/>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="80"/>
-                        <RowDefinition Height="80"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-                    <ImageButton
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        Source="ego.png"                                 
-                        Aspect="Fill"                                
-                        x:Name="btngel"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        Clicked="btngel_Clicked">
-                    </ImageButton>
-                    <ImageButton
-                        Grid.Row="3"
-                        Grid.Column="0"
-                        Source="colgate.jpg"                                 
-                        Aspect="Fill"                                
-                        x:Name="btncolgate"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        Clicked="btncolgate_Clicked">
-                    </ImageButton>
-                    <ImageButton
-                        Grid.Row="5"
-                        Grid.Column="0"
-                        Source="coca.jpg"                                 
-                        Aspect="Fill"                                
-                        x:Name="btncoca"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        Clicked="btncoca_Clicked">
-                        </ImageButton>
-                </Grid>
-            </VerticalStackLayout>
-        </Grid>
-    </Grid>
-    
-    
+    <VerticalStackLayout>
+        <Label 
+            FontSize="20"
+            HorizontalTextAlignment="Center"/>
+        <ListView x:Name="listaProducts" 
+          ItemSelected="listaProducts_ItemSelected" 
+          IsPullToRefreshEnabled="True" 
+          RefreshCommand="{Binding RefreshCommand}" 
+          IsRefreshing="{Binding IsRefreshing}">
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <ViewCell>
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label x:Name="lblId" Text="{Binding Id}" Grid.Row="0" Grid.Column="0" />
+                        <Label x:Name="lblNombre" Text="{Binding Nombre}" Grid.Row="0" Grid.Column="1"/>
+                        <Label x:Name="lblPrecio" Text="{Binding Precio}" Grid.Row="0" Grid.Column="2"/>
+                        <Label x:Name="lblFechaCducidad" Text="{Binding FechaCducidad}" Grid.Row="0" Grid.Column="3"/>
+                        <Label x:Name="lblImagen" Text="{Binding Imagen}" Grid.Row="0" Grid.Column="3"/>
+                    </Grid>
+                </StackLayout>
+            </ViewCell>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+    <ListView.Header>
+        <!-- Add your header content here -->
+    </ListView.Header>
+    <ListView.Footer>
+        <!-- Add your footer content here -->
+    </ListView.Footer>
+</ListView>
+<Button x:Name="btnRegistrar" Text="Registrar" Clicked="btnRegistrar_Clicked"></Button>
+    </VerticalStackLayout>
 </ContentPage>

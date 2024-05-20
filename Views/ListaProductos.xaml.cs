@@ -1,20 +1,20 @@
-using Newtonsoft.Json;
 using System.Collections.ObjectModel;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+
 namespace ProyectoFin.Views;
 
-public partial class vProductos : ContentPage
+public partial class ListaProductos : ContentPage
 {
     Store localStore;
     public ObservableCollection<Product> Products { get; set; }
-    public vProductos(Store store)
-    {
+    public ListaProductos(Store store)
+	{
         InitializeComponent();
         localStore = store;
-        InitializeComponent();
         Products = new ObservableCollection<Product>();
         LoadData();
     }
-
     private async void LoadData()
     {
         System.Diagnostics.Debug.WriteLine(localStore.Nombre);
@@ -22,24 +22,25 @@ public partial class vProductos : ContentPage
         {
             var response = await client.GetStringAsync("http://10.0.2.2:7000/api/producto/listar");
             System.Diagnostics.Debug.WriteLine($"Response: {response}"); // Imprime la respuesta en la consola de salida
-            var products = JsonConvert.DeserializeObject<List<Product>>(response);
+            var products = JsonSerializer.Deserialize<List<Product>>(response);
             foreach (var product in products)
             {
                 Products.Add(product);
-                System.Diagnostics.Debug.WriteLine($"Product: {product.Nombre}, Price: {product.Precio}"); // Imprime los datos en la consola de salida
             }
-            listaProducts.ItemsSource = Products;
+            System.Diagnostics.Debug.WriteLine($"Products: {Products}"); // Imprime los datos en la consola de salida
+            listaStores.ItemsSource = Products;
         }
     }
 
-    private void listaProducts_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    private void listaStores_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
-        var objetoStore = (Store)e.SelectedItem;
-        Navigation.PushAsync(new vProductos(objetoStore));
+        var objetoProduct = (Product)e.SelectedItem;
+        Navigation.PushAsync(new ProductUpdate(localStore, objetoProduct));
     }
 
     private void btnRegistrar_Clicked(object sender, EventArgs e)
     {
         Navigation.PushAsync(new ProductForm(localStore));
     }
+
 }
