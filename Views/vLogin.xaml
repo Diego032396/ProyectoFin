@@ -30,7 +30,7 @@
                     <Entry 
                         x:Name="txtUsuario"
                         Grid.Column="1"
-                        Placeholder="Ingrese su Usuario"
+                        Placeholder="Ingrese su Email"
                         VerticalOptions="Center"
                         TextColor="Black"/>
                 </Grid>
