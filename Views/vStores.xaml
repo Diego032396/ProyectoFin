@@ -31,7 +31,7 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Label x:Name="lblId" Text="{Binding Id}" Grid.Row="0" Grid.Column="0" />
+                                    <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" x:Name="lblId" Text="{Binding Id}" Grid.Row="0" Grid.Column="0" />
                             <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Vertical">
                                 <Label Text="Nombre:" FontAttributes="Bold"/>
                                 <Label x:Name="lblNombre" Text="{Binding Nombre}" />

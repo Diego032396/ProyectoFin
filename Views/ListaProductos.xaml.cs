@@ -20,7 +20,7 @@ public partial class ListaProductos : ContentPage
         System.Diagnostics.Debug.WriteLine(localStore.Nombre);
         using (var client = new HttpClient())
         {
-            var response = await client.GetStringAsync("http://10.0.2.2:7000/api/producto/listar");
+            var response = await client.GetStringAsync("http://10.0.2.2:7000/api/producto/listar/almacen/"+localStore.Id);
             System.Diagnostics.Debug.WriteLine($"Response: {response}"); // Imprime la respuesta en la consola de salida
             var products = JsonSerializer.Deserialize<List<Product>>(response);
             foreach (var product in products)

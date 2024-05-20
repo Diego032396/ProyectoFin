@@ -32,8 +32,11 @@
                                         <ColumnDefinition Width="50"/>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <Label x:Name="lblId" Text="{Binding id}" Grid.Row="0" Grid.Column="0" />
+                                    <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Vertical">
+                                        <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" x:Name="lblId" Text="{Binding id}" Grid.Row="0" Grid.Column="0" />
+                                    </StackLayout>
                                     <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Vertical">
                                         <Label Text="Nombre:" FontAttributes="Bold"/>
                                         <Label x:Name="lblNombre" Text="{Binding Nombre}" />
@@ -45,6 +48,9 @@
                                         <Label x:Name="lblFechaCducidad" Text="{Binding FechaCducidad}" />
                                         <Label Text="Url:" FontAttributes="Bold"/>
                                         <Label x:Name="lblUrl" Text="{Binding Imagen}" />
+                                    </StackLayout>
+                                    <StackLayout Grid.Row="0" Grid.Column="3" Orientation="Vertical" VerticalOptions="StartAndExpand">
+                                        <Image x:Name="imgProduct" Source="{Binding Imagen}" HeightRequest="50" WidthRequest="50" />
                                     </StackLayout>
                                 </Grid>
                             </StackLayout>
